@@ -1,7 +1,6 @@
 # discrete-optimization
-⚠️ Différents snippets liés à l'optimisation discrète.  Offert sans garantie légale!!
+⚠️ Différents snippets liés à l'optimisation discrète.  Offert sans garantie!
 
-⚠️ Various code snippets and toy projects related to discrete optimization.  If you use this code somewhere important you'll get fired.
 
 ## Dossiers
 
@@ -19,23 +18,9 @@ valeurN poidsN
 ```
 
 
-
-dynsolver:
-Example of dynamic programming for discrete knapsack solving
-Accepts a file with the following format:
-```
-number_of_items knapsack_capacity
-value1 weigth1
-value2 weigth2
-...
-valueN weigthN
-```
-
-
 ### Graph-Coloring
 
 Exemple simple de coloration de graphes.
-Simple example of graph coloring.
 
 
 
