@@ -30,3 +30,13 @@ value2 weigth2
 ...
 valueN weigthN
 ```
+
+
+### Graph-Coloring
+
+Exemple simple de coloration de graphes.
+Simple example of graph coloring.
+
+
+
+
