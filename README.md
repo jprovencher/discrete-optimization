@@ -24,7 +24,7 @@ dynsolver:
 Example of dynamic programming for discrete knapsack solving
 Accepts a file with the following format:
 ```
-numbeR_of_items knapsack_capacity
+number_of_items knapsack_capacity
 value1 weigth1
 value2 weigth2
 ...
