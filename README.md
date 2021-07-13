@@ -8,7 +8,7 @@
 ### Knapsack
 
 dynsolver:
-Exemple de programmation dynamique pour résolutiomn d'un knapsack entier
+Exemple de programmation dynamique pour résolution d'un knapsack entier
 Acccepte un fichier qui suit le format suivant:
 ```
 nombre_items capacité
