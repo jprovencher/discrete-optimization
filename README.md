@@ -22,6 +22,10 @@ valeurN poidsN
 
 Exemple simple de colorisation de graphes.
 
+Le dossier ```utils``` contient des classes accessoires pour les exemples de graphes
+
+
+
 
 
 
