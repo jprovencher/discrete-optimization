@@ -20,7 +20,7 @@ valeurN poidsN
 
 ### Graph-Coloring
 
-Exemple simple de coloration de graphes.
+Exemple simple de colorisation de graphes.
 
 
 
