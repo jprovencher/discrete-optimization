@@ -30,9 +30,14 @@ int main(int argc, char *argv[])
  */
     Graph *myGraph = new Graph();
     std::cout << myGraph->GetOrder() << std::endl;
-    myGraph->addVertex();
+
+    for (int i = 0; i < 500000000; i++)
+    {
+        Vertex *newVertex = new Vertex(i, -1);
+        myGraph->addVertex(newVertex);
+    }
     std::cout << myGraph->GetOrder() << std::endl;
     myGraph->CreateColorList();
-    
+
     return 0;
 }

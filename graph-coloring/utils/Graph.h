@@ -6,7 +6,7 @@ public:
     Graph(); //constructor
     void CreateColorList();
     int GetOrder();
-    Vertex *addVertex();
+    void addVertex(Vertex* newVertex);
 
 private: //member variables
     std::list<Vertex *> *vertexList;

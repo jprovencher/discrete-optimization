@@ -1,6 +1,3 @@
-
-
-
 class Vertex
 {
 
@@ -15,7 +12,10 @@ public:
 
     void SetColor(int color);
 
+    void AddNeighbour(Vertex *);
+
 private: //member variables
     int m_Color;
     int m_Index;
+    std::list<Vertex *> *nbList;
 };
