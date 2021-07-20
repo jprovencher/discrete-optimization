@@ -4,7 +4,7 @@
 # Variables to control Makefile operation
  
 CC = g++
-CFLAGS = -Wall -g -Wc++11-extensions
+CFLAGS = -Wall -g -Wc++17-extensions
  
 # ****************************************************
 # Targets needed to bring the executable up to date
@@ -12,9 +12,12 @@ CFLAGS = -Wall -g -Wc++11-extensions
 TARGET = greedy/main
  
 all: $(TARGET)
- 
-$(TARGET): $(TARGET).o utils/Vertex.o
-	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cpp
+
+
+
+$(TARGET): $(TARGET).o 
+	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cpp utils/Vertex.cpp utils/Graph.cpp
+
 
 Vertex.o :
 	$(CC) $(CFLAGS) -o utils/Vertex.o utils/Vertex.cpp
