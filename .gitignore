@@ -1,0 +1,4 @@
+*.plist
+*.dSYM
+*.o
+greedy/main
