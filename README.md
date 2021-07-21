@@ -31,7 +31,7 @@ nombre_vertex nombre_edges
 vertex1 vertex2
 vertex1 vertex3
 ...
-valeurX poidsN
+valeurX vertexN
 ```
 
 
