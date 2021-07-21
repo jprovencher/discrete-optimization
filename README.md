@@ -25,7 +25,14 @@ Exemple simple de colorisation de graphes.
 Le dossier ```utils``` contient des classes accessoires pour les exemples de graphes
 
 
-
+Le solver acccepte un fichier qui suit le format suivant:
+```
+nombre_vertex nombre_edges
+vertex1 vertex2
+vertex1 vertex3
+...
+valeurX vertexN
+```
 
 
 
