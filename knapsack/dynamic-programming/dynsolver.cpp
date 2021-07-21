@@ -10,7 +10,7 @@
 #include <fstream>
 #include <algorithm>    // std::max deeeerrrrrr
 #include <list>
-#include "Item.h"
+#include "../utils/Item.h"
 
 void dyn(int items_count, int capacity, std::list<Item *> *items)
 {

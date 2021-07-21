@@ -1,4 +1,4 @@
 *.plist
 *.dSYM
 *.o
-greedy/main
+dynamic-programming/main
