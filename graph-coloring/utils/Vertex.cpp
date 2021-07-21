@@ -5,6 +5,7 @@ Vertex::Vertex(int index, int color) //constructor
 {
     m_Index = index;
     m_Color = color;
+    nbList = new std::list<Vertex *>;
 };
 
 int Vertex::GetIndex()

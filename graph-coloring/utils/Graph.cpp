@@ -2,6 +2,11 @@
 #include "Vertex.h"
 #include "Graph.h"
 #include <iostream>
+#include <memory>
+#include <string>
+#include <algorithm>
+#include <functional>
+
 Graph::Graph() //constructor
 {
    vertexList = new std::list<Vertex *>;
@@ -20,7 +25,14 @@ int Graph::GetOrder()
    return vertexList->size();
 }
 
-void Graph::addVertex(Vertex* newVertex)
-{
+   void Graph::AddVertex(Vertex *newVertex)
+   {
    vertexList->push_back(newVertex);
+}
+Vertex *Graph::FindVertexById(int id)
+{
+   std::list<Vertex *>::iterator it;
+   it = vertexList->begin();
+   std::advance(it, id);
+   return *it;
 }

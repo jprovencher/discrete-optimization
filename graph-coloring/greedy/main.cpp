@@ -29,6 +29,11 @@ int main(int argc, char *argv[])
 
  */
 
+    Graph *myGraph = new Graph();
+
+
+    int numVertex = 0;
+    int numEdges = 0;
     std::fstream newfile;
     std::string delimiter = " ";
     newfile.open(argv[1], std::ios::in); //open a file to perform read operation using file object
@@ -55,32 +60,37 @@ int main(int argc, char *argv[])
             // std::cout << "token2:" << token2 << std::endl;
             if (i == 0)
             {
-                // numItems = std::stoi(token1);
+                numVertex = std::stoi(token1);
+                numEdges = std::stoi(token2);
                 // capacity = std::stoi(token2);
+                int k = 0;
+                for (k = 0; k < numVertex; k++)
+                {
+                    Vertex *newVertex = new Vertex(k, -1);
+                    myGraph->AddVertex(newVertex);
+                }
+                // std::cout << "ajout de " << myGraph->GetOrder() << " vertex" << std::endl;
+                // std::cout << " contenu de item 0" << myGraph->FindVertexById(2)->GetIndex() << " vertex" << std::endl;
+
             }
             else
             {
-                // itemsList->push_back(new Item(i, std::stoi(token1), std::stoi(token2), 0));
+                Vertex* v1 = myGraph->FindVertexById(std::stoi(token1));
+                Vertex* v2  = myGraph->FindVertexById(std::stoi(token2));
+                std::cout << "CONNEXION Vertex 1 ID: " << v1->GetIndex() << " VERS Vertex 2 ID: " << v2->GetIndex() << std::endl;
+                v1->AddNeighbour(v2);
+                v2->AddNeighbour(v1);
+
             }
             // }
             i++;
         }
     }
-    /*         std::cout << "Capacity and item numbers:" << capacity << " " << numItems << std::endl;
-        std::cout << "Total items inserted:" << itemsList->size() << std::endl; */
 
-    newfile.close(); //close the file object.
+    newfile.close(); //On ferme le fichier.
 
-    Graph *myGraph = new Graph();
-    std::cout << myGraph->GetOrder() << std::endl;
 
-    for (int i = 0; i < 50000; i++)
-    {
-        Vertex *newVertex = new Vertex(i, -1);
-        myGraph->addVertex(newVertex);
-    }
-    std::cout << myGraph->GetOrder() << std::endl;
-    myGraph->CreateColorList();
+
 
     return 0;
 }
