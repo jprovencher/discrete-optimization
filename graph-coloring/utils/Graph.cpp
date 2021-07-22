@@ -25,8 +25,8 @@ int Graph::GetOrder()
    return vertexList->size();
 }
 
-   void Graph::AddVertex(Vertex *newVertex)
-   {
+void Graph::AddVertex(Vertex *newVertex)
+{
    vertexList->push_back(newVertex);
 }
 Vertex *Graph::FindVertexById(int id)
@@ -35,4 +35,26 @@ Vertex *Graph::FindVertexById(int id)
    it = vertexList->begin();
    std::advance(it, id);
    return *it;
+}
+
+std::list<Vertex *>* Graph::GetVertices()
+{
+   return vertexList;
+}
+
+int Graph::GetSmallestAvailableColor(std::list<int>* colorList){
+   (*colorList).sort();
+   int j = 0;
+   std::list<int>::iterator it;
+   for(it = colorList->begin();it!=colorList->end();it++)
+   {
+      if(j!=(*it))
+      {
+         return j;
+      }
+      else{
+         j++;
+      }
+   }
+   return j;
 }

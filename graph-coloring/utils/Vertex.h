@@ -13,6 +13,7 @@ public:
     void SetColor(int color);
 
     void AddNeighbour(Vertex *);
+    std::list<int> *GetNeighbourColorList();
 
 private: //member variables
     int m_Color;

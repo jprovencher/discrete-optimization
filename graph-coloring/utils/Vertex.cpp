@@ -24,8 +24,19 @@ void Vertex::SetColor(int color)
 {
     m_Color = color;
 }
-void Vertex::AddNeighbour(Vertex* nb)
+void Vertex::AddNeighbour(Vertex *nb)
 {
     nbList->push_back(nb);
 }
 
+std::list<int> *Vertex::GetNeighbourColorList()
+{
+    std::list<int> *nbColorList;
+    nbColorList = new std::list<int>;
+    std::list<Vertex *>::iterator it;
+    for(it = nbList->begin(); it!= nbList->end();it++)
+    {
+        nbColorList->push_back((*it)->GetColor());
+    }
+    return nbColorList;
+}
