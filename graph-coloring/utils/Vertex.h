@@ -3,7 +3,7 @@ class Vertex
 
 public:
     Vertex(int index, int color); //constructor
-
+    int GetDegree();
     int GetIndex();
 
     void SetIndex(int index);

@@ -12,6 +12,10 @@ int Vertex::GetIndex()
 {
     return m_Index;
 }
+int Vertex::GetDegree()
+{
+    return nbList->size();
+}
 void Vertex::SetIndex(int index)
 {
     m_Index = index;
