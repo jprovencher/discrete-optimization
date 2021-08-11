@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
         newfile.close(); //On ferme le fichier.
 
         std::list<Vertex *> *vertices = myGraph->GetVertices();
-
+        
         return 0;
         ;
 }

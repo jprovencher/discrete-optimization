@@ -1,14 +1,31 @@
-# Makefile for Writing Make Files Example
- 
-# *****************************************************
-# Variables to control Makefile operation
- 
+# ╔═══════════════════════════════════════════╗
+# ║                                           ║
+# ║       Makefile pour les exemples de       ║
+# ║              graph-coloring               ║
+# ║                                           ║
+# ║                                           ║
+# ╚═══════════════════════════════════════════╝
+
+
+# ╔═══════════════════════════════════════════╗
+# ║                                           ║
+# ║     Variables du compilateur, linker.     ║
+# ║                                           ║
+# ║                                           ║
+# ╚═══════════════════════════════════════════╝
+
 CC = g++
 CFLAGS = -Wall -g -Wc++17-extensions
  
-# ****************************************************
-# Targets needed to bring the executable up to date
- 
+
+# ╔═══════════════════════════════════════════╗
+# ║                                           ║
+# ║     Cibles pour les librairies et les     ║
+# ║    executable dans chaque sous dossier    ║
+# ║                                           ║
+# ║                                           ║
+# ╚═══════════════════════════════════════════╝
+
 TARGET = greedy/main
 DSATUR = dsatur/main
 LIBS = utils/Vertex.cpp utils/Graph.cpp
@@ -29,4 +46,4 @@ Vertex.o :
 Graph.o :
 	$(CC) $(CFLAGS) -o utils/Graph.o utils/Graph.cpp
 clean:
-	$(RM) greedy/*.o utils/*.o
+	$(RM) -r greedy/*.o dsatur/*.o utils/*.o greedy/main.dSYM dsatur/main.dSYM
